@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-in.html" />
+
+	<title>Sign In | AdminKit Demo</title>
+	<style>
+		body {
+			background-image: url('{{ url('frontend/bg-pelayanan-disabilitas.jpg') }}');
+			background-size: cover;
+		}
+		h1 {
+			font-size: 40px !important;
+			color: #fff !important;
+		}
+		.jenis-layanan {
+			position: absolute;
+			right: 0;
+			margin-right: 120px;
+			margin-top: 10px;
+		}
+	</style>
+
+	<link href="{{ url('frontend/app.css') }}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<main class="d-flex w-100">
+		<div class="container d-flex flex-column">
+			<img src="{{ url('frontend/loading-3.gif') }}" alt="" width="150" style="margin-left: 22%; margin-top: 30px;">
+			<div class="row justify-content-center mt-4">
+				<div class="col-md-6">
+					<h2 style="color: #fff; font-size: 20px;">Pelayanan Khusus Disabilitas / Renta adalah pelayanan hukum dari Posbakum Pengadilan Negeri Langsa yang diberikan secara khusus bagi masyarakat melalui fasilitas khusus yang disediakan bagi masyarakat penyandang disabilitas.</h2>
+				</div>
+				<div class="col-md-6 mb-3">
+					<h2 style="color: #fff; font-size: 20px;">Fasilitas pelayanan hukum secara gratis dalam perkara perdata permohonan / voluntair bagi disabilitas / renta meliputi :
+					<ol>
+						<li>Konsultasi ( petugas datang kerumah )</li>
+						<li>Pembuatan surat permohonan</li>
+						<li>Pemberian kuasa</li>
+						<li>Pendampingan hukum luar dan dalam persidangan</li>
+						<li>Pengantaran Penetapan Pengadilan langsung kerumah</li>
+					</ol>
+					</h2>
+				</div>
+				<div class="col-md-5">
+					<img src="{{ url('frontend/icon-disabilitas.png') }}" alt="" width="350" style="position: absolute; left: 140px; bottom: 0;">
+				</div>
+				<div class="col-md-7">
+					<h2 style="color: #fff; font-size: 18px;">Jika penyandang disabilitas / renta termasuk kedalam keadaan ekonomi yang tidak mampu dan dapat membuktikannya dengan surat keterangan tidak mampu maka terkait biaya panjar perkara ditanggung seluruhnya oleh posbakum.</h2>
+					<h2 style="color: #fff; font-size: 18px;">Kriteria disabilitas : <br> Tuna Netra, tuna rungu, tuna wicara, gangguan sensorik, gangguan mental, gangguan motorik, ibu hamil lemah, orang lanjut usia.</h2>
+				</div>
+			</div>
+			<div>
+				<a href="{{ route('e-posbakum-2') }}" style="position: absolute; bottom: 0; left: 0;">
+					<img src="{{ url('frontend/btn-kembali-2.png') }}" alt="" width="200">
+				</a>
+				<a href="{{ $link != '' ? $link->link : '#' }}" style="position: absolute; bottom: 16px; right: 100px;">
+					<img src="{{ url('frontend/btn-ajukan.png') }}" alt="" width="250">
+				</a>
+			</div>
+		</div>
+	</main>
+	<script src="{{ url('frontend/app.js') }}"></script>
+</body>
+
+</html>
