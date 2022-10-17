@@ -14,7 +14,7 @@
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-in.html" />
 
-	<title>Sign In | AdminKit Demo</title>
+	<title>E-PTSP | Informasi & Pengaduan</title>
 	<style>
 		body {
 			background-image: url('{{ url('frontend/bg-informasi-pengaduan.jpg') }}');
