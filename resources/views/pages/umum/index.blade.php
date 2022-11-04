@@ -14,6 +14,7 @@
                                 <tr class="text-center">
                                     <th>No</th>
                                     <th>Link</th>
+                                    <th>Jenis</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -21,6 +22,7 @@
                                 @forelse ($items as $item)
                                 <tr class="text-center">
                                     <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $item->jenis }}</td>
                                     <td>
                                         <a href="{{ $item->link }}" target="_blank">Klik Link</a>
                                     </td>

@@ -12,6 +12,6 @@ class Umum extends Model
     public $table = 'umum';
 
     public $fillable = [
-        'link'
+        'link', 'jenis'
     ];
 }

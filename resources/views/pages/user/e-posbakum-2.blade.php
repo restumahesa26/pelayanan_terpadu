@@ -30,6 +30,10 @@
 			margin-right: 120px;
 			margin-top: 10px;
 		}
+        .text-desc {
+            color: #fff;
+            font-size: 18px;
+        }
 	</style>
 
 	<link href="{{ url('frontend/app.css') }}" rel="stylesheet">
@@ -39,41 +43,50 @@
 <body>
 	<main class="d-flex w-100">
 		<div class="container-fluid d-flex flex-column">
-			<div class="row justify-content-center" style="margin-top: 200px;">
-				<div class="col-10">
-					<div class="row justify-content-center">
-						<div class="col-md-8">
-							<div class="">
-								<a href="{{ route('e-posbakum-offline') }}">
-									<img src="{{ url('frontend/btn-posbakum-1.png') }}" alt="" style="margin-left: 100px !important; margin-top: 20px;">
-								</a><br>
-								<a href="{{ route('e-posbakum-online') }}">
-									<img src="{{ url('frontend/btn-posbakum-2.png') }}" alt="" style="margin-top: -40px !important; margin-left: 100px !important;">
-								</a><br>
-								<a href="{{ route('e-posbakum-disabilitas') }}">
-									<img src="{{ url('frontend/btn-posbakum-3.png') }}" alt="" style="margin-top: -40px !important; margin-left: 100px !important;">
-								</a>
-							</div>
+			<div class="row justify-content-start" style="margin-top: 180px;">
+				<div class="col-8">
+					<div class="row justify-content-start">
+						<div class="col-md-4 text-center">
+							<a href="{{ route('e-posbakum-offline') }}">
+                                <img src="{{ url('frontend/btn-layanan-1.png') }}" alt="" width="130">
+                            </a>
+                            <p class="text-desc">Pelayanan Secara Offline</p>
 						</div>
-						<div class="col-md-4">
+                        <div class="col-md-4 text-center">
+							<a href="{{ route('e-posbakum-disabilitas') }}">
+                                <img src="{{ url('frontend/btn-layanan-2.png') }}" alt="" width="130">
+                            </a>
+                            <p class="text-desc">Layanan Bagi Disabilitas</p>
 						</div>
-					</div>
-				</div>
-				<div class="col-2" style="margin-top: 100px;">
-					<div class="d-flex justify-content-end">
-						<a href="tel:+6282163480130">
-							<img src="{{ url('frontend/telepon.png') }}" alt="" width="100">
-						</a>
-					</div>
-					<div class="d-flex justify-content-end">
-						<a href="https://wa.me/6282163480130">
-							<img src="{{ url('frontend/wa.png') }}" alt="" width="100">
-						</a>
+                        <div class="col-md-4 text-center">
+							<a href="">
+                                <img src="{{ url('frontend/btn-layanan-3.png') }}" alt="" width="130">
+                            </a>
+                            <p class="text-desc">Layanan Bagi Masyarakat Tidak Mampu</p>
+						</div>
+                        <div class="col-md-4 text-center">
+							<a href="{{ route('e-posbakum-online') }}">
+                                <img src="{{ url('frontend/btn-layanan-4.png') }}" alt="" width="130">
+                            </a>
+                            <p class="text-desc">Pelayanan Secara Online</p>
+						</div>
+                        <div class="col-md-4 text-center">
+							<a href="">
+                                <img src="{{ url('frontend/btn-layanan-5.png') }}" alt="" width="130">
+                            </a>
+                            <p class="text-desc">Daftar Petugas Tiket</p>
+						</div>
+                        <div class="col-md-4 text-center">
+							<a href="">
+                                <img src="{{ url('frontend/btn-layanan-6.png') }}" alt="" width="130">
+                            </a>
+                            <p class="text-desc">Informasi Seputar Posbakum PN Langsa</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<a href="{{ route('e-posbakum') }}" style="position: absolute; bottom: 0; left: 0;">
-				<img src="{{ url('frontend/btn-kembali.png') }}" alt="">
+			<a href="{{ route('e-posbakum') }}" style="position: absolute; bottom: 0; right: 3%;">
+				<img src="{{ url('frontend/btn-kembali-3.png') }}" alt="" width="120">
 			</a>
 		</div>
 		<audio src="{{ url('frontend/halaman-2-posbakum.wav') }}" type="audio/wav" autoplay hidden loop></audio>

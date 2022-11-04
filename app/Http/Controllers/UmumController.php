@@ -39,7 +39,8 @@ class UmumController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'link' => 'required|string'
+            'link' => 'required|string',
+            'jenis' => 'required|string'
         ];
 
         $customMessages = [
@@ -51,6 +52,7 @@ class UmumController extends Controller
 
         Umum::create([
             'link' => $request->link,
+            'jenis' => $request->jenis,
         ]);
 
         return redirect()->route('umum.index')->with('success', 'Berhasil Menambah Data Umum');
@@ -90,7 +92,8 @@ class UmumController extends Controller
     public function update(Request $request, $id)
     {
         $rules = [
-            'link' => 'required|string'
+            'link' => 'required|string',
+            'jenis' => 'required|string',
         ];
 
         $customMessages = [
@@ -104,6 +107,7 @@ class UmumController extends Controller
 
         $item->update([
             'link' => $request->link,
+            'jenis' => $request->jenis,
         ]);
 
         return redirect()->route('umum.index')->with('success', 'Berhasil Mengubah Data Umum');

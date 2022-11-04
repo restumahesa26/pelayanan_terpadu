@@ -17,8 +17,11 @@
 	<title>E-PTSP</title>
 	<style>
 		body {
-			background-image: url('{{ url('frontend/bg-1.jpg') }}');
-			background-size: cover;
+			background-image: url('{{ url('frontend/bg-halaman-depan.jpg') }}');
+            height: 100% !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 		}
 		.btn-tamu {
 			position: absolute;
@@ -28,6 +31,11 @@
 			margin-left:-150px;
 			width: 350px !important;
 		}
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
 		.loading {
 			position: absolute;
 			bottom: 120px;
@@ -40,6 +48,17 @@
 			position: absolute;
 			bottom: 30px;
 		}
+        .top {
+            align-items: center;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 	</style>
 
 	<link href="{{ url('frontend/app.css') }}" rel="stylesheet">
@@ -49,19 +68,23 @@
 <body>
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
-			<div class="d-flex justify-content-center">
-				<div class="d-flex justify-content-start">
-					<button class="btn btn-primary btn-tamu" id="btn-tamu">
-                        Masuk dan Isi Buku Tamu
-                    </button>
-					<img src="{{ url('frontend/loading-2.gif') }}" alt="" class="loading">
-				</div>
-				<div class="text-center text-layanan">
-					<h5 style="font-size: 16px; color: #fff;">Jam Layanan</h5>
-					<h5 style="font-size: 16px; color: #fff;">Senin s.d Kamis Pukul 08.00-16.30 Jumat: Pukul 08.00-17.00 WIB</h5>
-					<h5 style="font-size: 16px; color: #fff;">Istirahat : Senin s.d Kamis Pukul 12.30-13.30 Jumat: Pukul 12.30-14.00 WIB</h5>
-				</div>
-			</div>
+            <div class="top">
+                <h5 style="color: #FFF; font-weight: bold"><img src="{{ url('eye.png') }}" alt="" width="16"> Pengunjung Hari Ini : {{ $userToday }}</h5>
+                <h5 style="color: #FFF; font-weight: bold"><img src="{{ url('eye.png') }}" alt="" width="16">Pengunjung Bulan Ini : {{ $userThisMonth }}</h5>
+                <h5 style="color: #FFF; font-weight: bold"><img src="{{ url('eye.png') }}" alt="" width="16">Pengunjung Seluruhnya : {{ $user }}</h5>
+            </div>
+            <div class="bottom">
+                <div class="d-flex justify-content-end">
+                    <a href="{{ $link != '' ? $link->link : '#' }}" target="_blank">
+                        <img src="{{ url('frontend/btn-tamu.png') }}" alt="" srcset="" width="450">
+                    </a>
+                </div>
+                <div class="d-flex justify-content-end" style="margin-top: -30px">
+                    <a href="{{ route('tentang') }}">
+                        <img src="{{ url('frontend/btn-tentang.png') }}" alt="" srcset="" width="350">
+                    </a>
+                </div>
+            </div>
 		</div>
 	</main>
 	<audio src="{{ url('frontend/halaman-1.wav') }}" type="audio/wav" autoplay hidden loop></audio>

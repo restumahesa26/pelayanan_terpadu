@@ -38,17 +38,17 @@
 
 <body>
 	<main class="d-flex w-100">
-		<div class="container d-flex flex-column">
-			<img src="{{ url('frontend/loading-3.gif') }}" alt="" width="150" style="margin-left: 22%; margin-top: 30px;">
+		<div class="container-fluid d-flex flex-column" style="margin-left: 20px; margin-right: 20px;">
+			<p style="margin-top: 100px;"></p>
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-6">
-					<h2 style="color: #fff; font-size: 24px;">Pelayanan online / Sarana Konsultasi Hukum Gratis Bagi Masyarakat ( SAKHTIMAS ) adalah pelayanan hukum dari Posbakum Pengadilan Negeri Langsa yang diberikan bagi masyarakat melalui sambungan telepon, whatsapp, sms, instagram, facebook dan email.</h2>
+					<h2 style="color: #fff; font-size: 24px; font-weight: bold;">Pelayanan online / Sarana Konsultasi Hukum Gratis Bagi Masyarakat ( SAKHTIMAS ) adalah pelayanan hukum dari Posbakum Pengadilan Negeri Langsa yang diberikan bagi masyarakat melalui sambungan telepon, whatsapp, sms, instagram, facebook dan email.</h2>
 				</div>
 				<div class="col-md-6">
-					<h2 style="color: #fff; font-size: 24px;">Merupakan sarana konsultasi hukum secara online yang disediakan oleh Pengadilan Negeri Langsa bagi Masyarakat yang membutuhkan pelayanan pemberian solusi dan / atau informasi permasalahan hukum maupun kebutuhan lainnya yang berkaitan dengan hukum yang diberikan oleh petugas.</h2>
+					<h2 style="color: #fff; font-size: 24px; font-weight: bold;">Merupakan sarana konsultasi hukum secara online yang disediakan oleh Pengadilan Negeri Langsa bagi Masyarakat yang membutuhkan pelayanan pemberian solusi dan / atau informasi permasalahan hukum maupun kebutuhan lainnya yang berkaitan dengan hukum yang diberikan oleh petugas.</h2>
 				</div>
 				<div class="col-md-12 text-center mt-3">
-					<h2 style="color: #fff; font-size: 30px;">Silahkan pilih media layanan konsultasi online yang diinginkan</h2>
+					<h2 style="color: #fff; font-size: 30px; font-weight: bold;">Silahkan pilih media layanan konsultasi online yang diinginkan</h2>
 				</div>
 				<div class="col-md-6">
 					<div class="row justify-content-center text-center">
@@ -108,8 +108,8 @@
 				</div>
 			</div>
 			<div>
-				<a href="{{ route('e-posbakum-2') }}" style="position: absolute; bottom: 0; right: 0;">
-					<img src="{{ url('frontend/btn-kembali-2.png') }}" alt="" width="200">
+				<a href="{{ route('e-posbakum-2') }}" style="position: absolute; bottom: 0; right: 2%;">
+					<img src="{{ url('frontend/btn-kembali-3.png') }}" alt="" width="100">
 				</a>
 			</div>
 		</div>

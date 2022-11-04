@@ -18,7 +18,10 @@
 	<style>
 		body {
 			background-image: url('{{ url('frontend/bg-layanan.jpg') }}');
-			background-size: cover;
+            height: 100% !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 		}
 		h1 {
 			font-size: 40px !important;
@@ -38,52 +41,52 @@
 
 <body>
 	<main class="d-flex w-100">
-		<div class="container-fluid d-flex flex-column">
+		<div class="container d-flex flex-column">
 			<div class="row justify-content-center" style="margin-top: 120px;">
 				<div class="col-7">
-					<div class="text-center"  style="margin-left: 280px;">
-						<a href={{ route('umum') }}>
-							<img src="{{ url('frontend/btn-umum.png') }}" alt="" width="500">
-						</a><br>
-						<a href="{{ route('pidana') }}">
-							<img src="{{ url('frontend/btn-pidana.png') }}" alt="" width="500" style="margin-top: -20px !important;">
-						</a><br>
-						<a href="{{ route('perdata') }}">
-							<img src="{{ url('frontend/btn-perdata.png') }}" alt="" width="500" style="margin-top: -20px !important; ">
-						</a><br>
-						<a href="{{ route('hukum') }}">
-							<img src="{{ url('frontend/btn-hukum.png') }}" alt="" width="500" style="margin-top: -20px !important;">
-						</a><br>
-						<a href="{{ route('informasi-pengaduan') }}">
-							<img src="{{ url('frontend/btn-informasi.png') }}" alt="" width="500" style="margin-top: -20px !important;">
-						</a><br>
-						<a href="{{ route('e-posbakum') }}">
-							<img src="{{ url('frontend/btn-posbakum.png') }}" alt="" width="500" style="margin-top: -20px !important;">
-						</a><br>
-						<a href="{{ route('disabilitas') }}">
-							<img src="{{ url('frontend/btn-disabilitas.png') }}" alt="" width="500" style="margin-top: -20px !important;">
-						</a>
-					</div>
+					<a href="{{ route('umum') }}">
+                        <img src="{{ url('frontend/btn-umum.png') }}" alt="" width="400">
+                    </a><br>
+                    <a href="{{ route('pidana') }}">
+                        <img src="{{ url('frontend/btn-pidana.png') }}" alt="" width="400">
+                    </a><br>
+                    <a href="{{ route('perdata') }}">
+                        <img src="{{ url('frontend/btn-perdata.png') }}" alt="" width="400">
+                    </a><br>
+                    <a href="{{ route('hukum') }}">
+                        <img src="{{ url('frontend/btn-hukum.png') }}" alt="" width="400">
+                    </a><br>
+                    <a href="{{ route('informasi-pengaduan') }}">
+                        <img src="{{ url('frontend/btn-informasi-pengaduan.png') }}" alt="" width="400">
+                    </a><br>
+                    <a href="{{ route('e-posbakum') }}" target="_blank">
+                        <img src="{{ url('frontend/btn-posbakum.png') }}" alt="" width="400">
+                    </a><br>
+                    <a href="{{ route('disabilitas') }}">
+                        <img src="{{ url('frontend/btn-disabilitas.png') }}" alt="" width="400">
+                    </a>
 				</div>
-				<div class="col-4">
-					<img src="{{ url('frontend/maskot.png') }}" alt="" width="370" class="d-none d-md-block" style="position: absolute; bottom: 0;">
-				</div>
-				<div class="col-1" style="margin-top: 100px;">
+                <div class="col-3">
+                    <img src="{{ url('frontend/layanan.gif') }}" alt="" class="d-none d-md-block" width="500" style="position: absolute; right: 250px; bottom: 0;">
+                </div>
+				<div class="col-2">
 					<div class="d-flex justify-content-end">
-						<a href="tel:+6282163480130">
-							<img src="{{ url('frontend/telepon.png') }}" alt="" width="100">
+						<a href="tel:+6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-telp.png') }}" alt="" width="120">
 						</a>
 					</div>
 					<div class="d-flex justify-content-end">
-						<a href="https://wa.me/6282163480130">
-							<img src="{{ url('frontend/wa.png') }}" alt="" width="100">
+						<a href="https://wa.me/6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-vc.png') }}" alt="" width="120">
+						</a>
+					</div>
+                    <div class="d-flex justify-content-end">
+						<a href="https://wa.me/6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-wa.png') }}" alt="" width="120">
 						</a>
 					</div>
 				</div>
 			</div>
-			<a href="{{ route('home2') }}">
-				<img src="{{ url('frontend/btn-kembali.png') }}" alt="">
-			</a>
 			<audio src="{{ url('frontend/layanan.wav') }}" type="audio/wav" autoplay hidden loop></audio>
 		</div>
 	</main>

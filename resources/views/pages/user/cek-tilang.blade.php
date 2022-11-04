@@ -18,7 +18,10 @@
 	<style>
 		body {
 			background-image: url('{{ url('frontend/bg-tilang.jpg') }}');
-			background-size: cover;
+			height: 100% !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 		}
 		h1 {
 			font-size: 40px !important;
@@ -38,16 +41,35 @@
 
 <body>
 	<main class="d-flex w-100">
-		<div class="container-fluid d-flex flex-column">
+		<div class="container d-flex flex-column">
 			<div class="row justify-content-center" style="margin-top: 120px;">
-
+                <div class="col-10"></div>
+                <div class="col-2">
+					<div class="d-flex justify-content-end">
+						<a href="tel:+6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-telp.png') }}" alt="" width="120">
+						</a>
+					</div>
+					<div class="d-flex justify-content-end">
+						<a href="https://wa.me/6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-vc.png') }}" alt="" width="120">
+						</a>
+					</div>
+                    <div class="d-flex justify-content-end">
+						<a href="https://wa.me/6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-wa.png') }}" alt="" width="120">
+						</a>
+					</div>
+                    <div class="d-flex justify-content-end">
+						<a href="{{ route('pidana') }}">
+							<img src="{{ url('frontend/btn-kembali-3.png') }}" alt="" width="120">
+						</a>
+					</div>
+				</div>
 			</div>
 			<div>
-                <a href="{{ $link != '' ? $link->link : '#' }}" style="position: absolute; bottom: 0; left: 40%;" target="_blank">
+                <a href="{{ $link != '' ? $link->link : '#' }}" style="position: absolute; left: 40%; top: 48%;" target="_blank">
 					<img src="{{ url('frontend/btn-cek-tilang.png') }}" alt="" width="400">
-				</a>
-				<a href="{{ route('pidana') }}" style="position: absolute; bottom: 0; left: 0;">
-					<img src="{{ url('frontend/btn-kembali.png') }}" alt="">
 				</a>
 			</div>
 			<audio src="{{ url('frontend/tilang.wav') }}" type="audio/wav" autoplay hidden loop></audio>

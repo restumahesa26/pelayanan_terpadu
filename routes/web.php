@@ -8,6 +8,7 @@ use App\Http\Controllers\HukumController;
 use App\Http\Controllers\InformasiPengaduanController;
 use App\Http\Controllers\PerdataController;
 use App\Http\Controllers\PidanaController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RentaDisabilitasController;
 use App\Http\Controllers\UmumController;
 use Illuminate\Support\Facades\Route;
@@ -25,9 +26,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
-Route::get('/home', [HomeController::class, 'home2'])->name('home2');
-
 Route::get('/jenis-layanan', [HomeController::class, 'layanan'])->name('layanan');
+
+Route::get('/tentang-aplikasi', [HomeController::class, 'tentang'])->name('tentang');
 
 Route::get('/jenis-layanan/umum/', [HomeController::class, 'umum'])->name('umum');
 
@@ -39,13 +40,19 @@ Route::get('/jenis-layanan/perdata/', [HomeController::class, 'perdata'])->name(
 
 Route::get('/jenis-layanan/hukum/', [HomeController::class, 'hukum'])->name('hukum');
 
+Route::get('/jenis-layanan/hukum/e-lima', [HomeController::class, 'e_lima'])->name('e-lima');
+
 Route::get('/jenis-layanan/informasi-pengaduan/', [HomeController::class, 'informasi_pengaduan'])->name('informasi-pengaduan');
 
 Route::get('/jenis-layanan/informasi-pengaduan/informasi', [HomeController::class, 'informasi'])->name('informasi');
 
 Route::get('/jenis-layanan/informasi-pengaduan/pengaduan', [HomeController::class, 'pengaduan'])->name('pengaduan');
 
+Route::get('/jenis-layanan/informasi-pengaduan/pengaduan/sikomo-dua', [HomeController::class, 'sikomo_dua'])->name('sikomo-dua');
+
 Route::get('/jenis-layanan/e-posbakum/', [HomeController::class, 'e_posbakum'])->name('e-posbakum');
+
+Route::get('/jenis-layanan/e-posbakum/tentang-aplikasi', [HomeController::class, 'tentang_2'])->name('tentang-posbakum');
 
 Route::get('/jenis-layanan/e-posbakum/masuk/', [HomeController::class, 'e_posbakum_2'])->name('e-posbakum-2');
 
@@ -62,6 +69,10 @@ Route::get('/jenis-layanan/layanan-disabilitas-renta/fasilitas-disabilitas-renta
 Route::get('/jenis-layanan/layanan-disabilitas-renta/perdata-voluntair', [HomeController::class, 'perdata_voluntair'])->name('disabilitas.voluntair');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard/profile', [ProfileController::class, 'edit'])->middleware(['auth'])->name('profile.edit');
+
+Route::put('/dashboard/profile/update', [ProfileController::class, 'update'])->middleware(['auth'])->name('profile.update');
 
 Route::resource('umum', UmumController::class)->middleware(['auth']);
 

@@ -15,6 +15,7 @@ class CreateUmumTable extends Migration
     {
         Schema::create('umum', function (Blueprint $table) {
             $table->id();
+            $table->enum('jenis', ['Surat & Undangan Elektronik', 'Permohonan Pinjam Buku Perpustakaan']);
             $table->string('link');
             $table->timestamps();
         });

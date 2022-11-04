@@ -30,6 +30,11 @@
 			margin-right: 120px;
 			margin-top: 10px;
 		}
+        .top {
+            position: absolute;
+            top: 5px;
+            right: 30px;
+        }
 	</style>
 
 	<link href="{{ url('frontend/app.css') }}" rel="stylesheet">
@@ -39,38 +44,24 @@
 <body>
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
-			<img src="{{ url('frontend/loading-3.gif') }}" alt="" width="150" style="margin-left: 22%; margin-top: 30px;">
-			<div class="row justify-content-center mt-4">
-				<div class="col-md-6">
-					<h2 style="color: #fff; font-size: 20px;">Pelayanan Khusus Disabilitas / Renta adalah pelayanan hukum dari Posbakum Pengadilan Negeri Langsa yang diberikan secara khusus bagi masyarakat melalui fasilitas khusus yang disediakan bagi masyarakat penyandang disabilitas.</h2>
-				</div>
-				<div class="col-md-6 mb-3">
-					<h2 style="color: #fff; font-size: 20px;">Fasilitas pelayanan hukum secara gratis dalam perkara perdata permohonan / voluntair bagi disabilitas / renta meliputi :
-					<ol>
-						<li>Konsultasi ( petugas datang kerumah )</li>
-						<li>Pembuatan surat permohonan</li>
-						<li>Pemberian kuasa</li>
-						<li>Pendampingan hukum luar dan dalam persidangan</li>
-						<li>Pengantaran Penetapan Pengadilan langsung kerumah</li>
-					</ol>
-					</h2>
-				</div>
-				<div class="col-md-5">
-					<img src="{{ url('frontend/icon-disabilitas.png') }}" alt="" width="350" style="position: absolute; left: 140px; bottom: 0;">
-				</div>
-				<div class="col-md-7">
-					<h2 style="color: #fff; font-size: 18px;">Jika penyandang disabilitas / renta termasuk kedalam keadaan ekonomi yang tidak mampu dan dapat membuktikannya dengan surat keterangan tidak mampu maka terkait biaya panjar perkara ditanggung seluruhnya oleh posbakum.</h2>
-					<h2 style="color: #fff; font-size: 18px;">Kriteria disabilitas : <br> Tuna Netra, tuna rungu, tuna wicara, gangguan sensorik, gangguan mental, gangguan motorik, ibu hamil lemah, orang lanjut usia.</h2>
-				</div>
-			</div>
-			<div>
-				<a href="{{ route('e-posbakum-2') }}" style="position: absolute; bottom: 0; left: 0;">
-					<img src="{{ url('frontend/btn-kembali-2.png') }}" alt="" width="200">
-				</a>
-				<a href="{{ $link != '' ? $link->link : '#' }}" style="position: absolute; bottom: 16px; right: 100px;">
-					<img src="{{ url('frontend/btn-ajukan.png') }}" alt="" width="250">
-				</a>
-			</div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-7">
+                    <div class="" style="position: absolute; bottom: 4%;">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <h3 style="color: #fff; font-size: 24px;">Klik tombol disamping</h3>
+                            <a href="{{ $link != '' ? $link->link : '#' }}" target="_blank">
+                                <img src="{{ url('frontend/bg-permohonan-voluntair.png') }}" alt="" width="400">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top">
+                <a href="{{ route('e-posbakum-2') }}">
+                    <img src="{{ url('frontend/btn-kembali-3.png') }}" alt="" width="80">
+                </a>
+            </div>
 		</div>
 	</main>
 	<script src="{{ url('frontend/app.js') }}"></script>

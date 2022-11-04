@@ -15,7 +15,7 @@ class CreatePerdataTable extends Migration
     {
         Schema::create('perdata', function (Blueprint $table) {
             $table->id();
-            $table->enum('jenis', ['Pendaftaran Gugatan, Bantahan, Gugatan Sederhana, Permohonan Secara Online', 'Pendaftaran Upaya Hukum Banding Secara Online']);
+            $table->enum('jenis', ['Pendaftaran Gugatan', 'Pendaftaran Gugatan Sederhana', 'Pendaftaran Permohononan / Volountair', 'Pendaftaran Bantahan', 'Pendaftaran Upaya Hukum Banding', 'Permohonan Izin Keterlambatan Sidang Perdata Gugatan Dari Para Pihak']);
             $table->string('link');
             $table->timestamps();
         });

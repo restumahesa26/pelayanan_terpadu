@@ -15,10 +15,11 @@
                             <select name="jenis" id="jenis" class="form-control @error('jenis') is-invalid @enderror">
                                 <option value="" hidden>--Pilih Jenis Pidana</option>
                                 <option value="Cek Denda Tilang" @if(old('jenis', $item->jenis) == 'Cek Denda Tilang') selected @endif>Cek Denda Tilang</option>
-                                <option value="Izin Penggeledahan & Penyitaan" @if(old('jenis', $item->jenis) == 'Izin Penggeledahan & Penyitaan') selected @endif>Izin Penggeledahan & Penyitaan</option>
-                                <option value="Pelimpahan Berkas" @if(old('jenis', $item->jenis) == 'Pelimpahan Berkas') selected @endif>Pelimpahan Berkas</option>
+                                <option value="Izin Penggeledahan" @if(old('jenis', $item->jenis) == 'Izin Penggeledahan') selected @endif>Izin Penggeledahan</option>
+                                <option value="Izin Penyitaan" @if(old('jenis', $item->jenis) == 'Izin Penyitaan') selected @endif>Izin Penyitaan</option>
                                 <option value="Perpanjangan Penahanan" @if(old('jenis', $item->jenis) == 'Perpanjangan Penahanan') selected @endif>Perpanjangan Penahanan</option>
-                                <option value="Izin Besuk Tahanan & Pinjam Pakai Barang Bukti" @if(old('jenis', $item->jenis) == 'Izin Besuk Tahanan & Pinjam Pakai Barang Bukti') selected @endif>Izin Besuk Tahanan & Pinjam Pakai Barang Bukti</option>
+                                <option value="Pelimpahan Berkas Pidana" @if(old('jenis', $item->jenis) == 'Pelimpahan Berkas Pidana') selected @endif>Pelimpahan Berkas Pidana</option>
+                                <option value="Pinjam Pakai Barang Bukti" @if(old('jenis', $item->jenis) == 'Pinjam Pakai Barang Bukti') selected @endif>Pinjam Pakai Barang Bukti</option>
                             </select>
                             @error('jenis')
                                 <span class="invalid-feedback" role="alert">

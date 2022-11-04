@@ -15,7 +15,7 @@ class CreatePidanaTable extends Migration
     {
         Schema::create('pidana', function (Blueprint $table) {
             $table->id();
-            $table->enum('jenis', ['Cek Denda Tilang', 'Izin Penggeledahan & Penyitaan', 'Pelimpahan Berkas', 'Perpanjangan Penahanan', 'Izin Besuk Tahanan & Pinjam Pakai Barang Bukti']);
+            $table->enum('jenis', ['Cek Denda Tilang', 'Izin Penggeledahan', 'Izin Penyitaan', 'Perpanjangan Penahanan', 'Pelimpahan Berkas Pidana', 'Pinjam Pakai Barang Bukti']);
             $table->string('link');
             $table->timestamps();
         });

@@ -86,6 +86,7 @@ class ComposerStaticInit5eac8d6246c1066bf18706245a310132
         array (
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
+            'Rainwater\\Active\\' => 17,
         ),
         'P' => 
         array (
@@ -307,6 +308,10 @@ class ComposerStaticInit5eac8d6246c1066bf18706245a310132
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
+        'Rainwater\\Active\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/joshrainwater/active-users/src/Active',
+        ),
         'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
@@ -520,10 +525,12 @@ class ComposerStaticInit5eac8d6246c1066bf18706245a310132
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\EPosbakumController' => __DIR__ . '/../..' . '/app/Http/Controllers/EPosbakumController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\HukumController' => __DIR__ . '/../..' . '/app/Http/Controllers/HukumController.php',
         'App\\Http\\Controllers\\InformasiPengaduanController' => __DIR__ . '/../..' . '/app/Http/Controllers/InformasiPengaduanController.php',
         'App\\Http\\Controllers\\PerdataController' => __DIR__ . '/../..' . '/app/Http/Controllers/PerdataController.php',
         'App\\Http\\Controllers\\PidanaController' => __DIR__ . '/../..' . '/app/Http/Controllers/PidanaController.php',
+        'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
         'App\\Http\\Controllers\\RentaDisabilitasController' => __DIR__ . '/../..' . '/app/Http/Controllers/RentaDisabilitasController.php',
         'App\\Http\\Controllers\\UmumController' => __DIR__ . '/../..' . '/app/Http/Controllers/UmumController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -537,6 +544,7 @@ class ComposerStaticInit5eac8d6246c1066bf18706245a310132
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Models\\BukuTamu' => __DIR__ . '/../..' . '/app/Models/BukuTamu.php',
+        'App\\Models\\EPosbakum' => __DIR__ . '/../..' . '/app/Models/EPosbakum.php',
         'App\\Models\\Hukum' => __DIR__ . '/../..' . '/app/Models/Hukum.php',
         'App\\Models\\InformasiPengaduan' => __DIR__ . '/../..' . '/app/Models/InformasiPengaduan.php',
         'App\\Models\\KaumRenta' => __DIR__ . '/../..' . '/app/Models/KaumRenta.php',
@@ -4303,6 +4311,9 @@ class ComposerStaticInit5eac8d6246c1066bf18706245a310132
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
+        'Rainwater\\Active\\Active' => __DIR__ . '/..' . '/joshrainwater/active-users/src/Active/Active.php',
+        'Rainwater\\Active\\ActiveFacade' => __DIR__ . '/..' . '/joshrainwater/active-users/src/Active/ActiveFacade.php',
+        'Rainwater\\Active\\ActiveServiceProvider' => __DIR__ . '/..' . '/joshrainwater/active-users/src/Active/ActiveServiceProvider.php',
         'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
         'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
         'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',

@@ -15,7 +15,6 @@
                                 <option value="" hidden>--Pilih Jenis Informasi & Pengaduan</option>
                                 <option value="Informasi Administrasi Layanan" @if(old('jenis') == 'Informasi Administrasi Layanan') selected @endif>Informasi Administrasi Layanan</option>
                                 <option value="Informasi Humas" @if(old('jenis') == 'Informasi Humas') selected @endif>Informasi Humas</option>
-                                <option value="Pengaduan Melalui Sikomo Dua" @if(old('jenis') == 'Pengaduan Melalui Sikomo Dua') selected @endif>Pengaduan Melalui Sikomo Dua</option>
                                 <option value="Pengaduan Melalui Siwas" @if(old('jenis') == 'Pengaduan Melalui Siwas') selected @endif>Pengaduan Melalui Siwas</option>
                                 <option value="Pengaduan Gratifikasi" @if(old('jenis') == 'Pengaduan Gratifikasi') selected @endif>Pengaduan Gratifikasi</option>
                                 <option value="Pengaduan Terkait Layanan" @if(old('jenis') == 'Pengaduan Terkait Layanan') selected @endif>Pengaduan Terkait Layanan</option>

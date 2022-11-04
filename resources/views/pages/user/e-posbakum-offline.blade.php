@@ -30,6 +30,16 @@
 			margin-right: 120px;
 			margin-top: 10px;
 		}
+        .top {
+            position: absolute;
+            top: 5px;
+            right: 30px;
+        }
+        .content {
+            position: absolute;
+            bottom: 0;
+            left: 17%;
+        }
 	</style>
 
 	<link href="{{ url('frontend/app.css') }}" rel="stylesheet">
@@ -39,25 +49,19 @@
 <body>
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
-			<img src="{{ url('frontend/loading-3.gif') }}" alt="" width="150" style="margin-left: 22%; margin-top: 30px;">
-			<div class="d-flex justify-content-center mt-5">
-				<h2 style="color: #fff; font-size: 30px;">Pelayanan secara offline adalah pelayanan hukum yang diberikan bagi masyarakat yang datang langsung ke Posbakum di Pengadilan Negeri Langsa. Masyarakat dapat menemui petugas piket pada Posbakum Pengadilan Negeri Langsa untuk mendapatkan layanan segera.</h2>
-			</div>
-			<div class="row mt-5">
-				<div class="col-md-8">
-					<h2 style="color: #fff; font-size: 30px;">Untuk informasi lebih lanjut. Silahkan download brosur ataupun hubungi petugas.</h2>
-				</div>
-				<div class="col-md-4">
-					<a href="{{ url('posbakum.pdf') }}">
-						<img src="{{ url('frontend/btn-download.png') }}" alt="" width="200">
-					</a>
-				</div>
-			</div>
-			<div>
-				<a href="{{ route('e-posbakum-2') }}" style="position: absolute; bottom: 0; right: 0;">
-					<img src="{{ url('frontend/btn-kembali-2.png') }}" alt="" width="200">
-				</a>
-			</div>
+            <div class="content">
+                <div class="d-flex justify-content-start align-items-center">
+                    <h3 style="color: #fff; font-size: 24px;">Klik untuk <br> Lihat brosur</h3>
+                    <a href="{{ url('posbakum.pdf') }}">
+                        <img src="{{ url('frontend/btn-syarat.png') }}" alt="" width="70">
+                    </a>
+                </div>
+            </div>
+            <div class="top">
+                <a href="{{ route('e-posbakum-2') }}">
+                    <img src="{{ url('frontend/btn-kembali-3.png') }}" alt="" width="80">
+                </a>
+            </div>
 		</div>
 	</main>
 	<script src="{{ url('frontend/app.js') }}"></script>

@@ -19,6 +19,10 @@
 		body {
 			background-image: url('{{ url('frontend/bg-posbakum.jpg') }}');
 			background-size: cover;
+            height: 100% !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 		}
 		h1 {
 			font-size: 40px !important;
@@ -30,6 +34,11 @@
 			margin-right: 120px;
 			margin-top: 10px;
 		}
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
 	</style>
 
 	<link href="{{ url('frontend/app.css') }}" rel="stylesheet">
@@ -39,15 +48,18 @@
 <body>
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
-			<img src="{{ url('frontend/loading-3.gif') }}" alt="" width="420" style="position: absolute; top: 0px; left: 180px;">
-			<div>
-				<a href="{{ route('layanan') }}" style="position: absolute; bottom: 0; left: 0;">
-					<img src="{{ url('frontend/btn-kembali.png') }}" alt="">
-				</a>
-				<a href="{{ route('e-posbakum-2') }}" style="position: absolute; bottom: 0; right: 0;">
-					<img src="{{ url('frontend/btn-masuk.png') }}" alt="">
-				</a>
-			</div>
+            <div class="bottom">
+                <div class="d-flex justify-content-end">
+                    <a href="{{ route('tentang-posbakum') }}">
+                        <img src="{{ url('frontend/btn-tentang.png') }}" alt="" srcset="" width="350">
+                    </a>
+                </div>
+                <div class="d-flex justify-content-end" style="margin-top: -30px">
+                    <a href="{{ route('e-posbakum-2') }}">
+                        <img src="{{ url('frontend/btn-masuk-posbakum.png') }}" alt="" srcset="" width="230">
+                    </a>
+                </div>
+            </div>
 		</div>
 		<audio src="{{ url('frontend/depan-posbakum.wav') }}" type="audio/wav" autoplay hidden loop></audio>
 	</main>

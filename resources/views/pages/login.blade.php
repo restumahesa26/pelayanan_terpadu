@@ -52,9 +52,6 @@
                                         <div class="mb-3">
                                             <label class="form-label">Password</label>
                                             <input class="form-control form-control-lg" type="password" name="password" placeholder="Masukkan Password" />
-                                            <small>
-                                                <a href="index.html">Forgot password?</a>
-                                            </small>
                                         </div>
                                         <div>
                                             <label class="form-check">

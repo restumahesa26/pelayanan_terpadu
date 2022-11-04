@@ -18,8 +18,10 @@
 	<style>
 		body {
 			background-image: url('{{ url('frontend/bg-informasi-pengaduan.jpg') }}');
-			background-size: cover;
-  		background-repeat: no-repeat;
+			height: 100% !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 		}
 		h1 {
 			font-size: 40px !important;
@@ -39,39 +41,46 @@
 
 <body>
 	<main class="d-flex w-100">
-		<div class="container-fluid d-flex flex-column">
+		<div class="container d-flex flex-column">
 			<div class="row justify-content-center" style="margin-top: 120px;">
 				<div class="col-10">
-					<div class="row justify-content-center">
+					<div class="row">
 						<div class="col-md-8">
 							<a href="{{ route('informasi') }}">
-								<img src="{{ url('frontend/btn-sub-informasi.png') }}" alt="">
+								<img src="{{ url('frontend/btn-sub-informasi.png') }}" alt="" width="400" style="margin-top: 5px">
 							</a><br>
 							<a href="{{ route('pengaduan') }}">
-								<img src="{{ url('frontend/btn-pengaduan.png') }}" alt="" style="margin-top: -40px !important; margin-right: 100px !important;">
+								<img src="{{ url('frontend/btn-sub-pengaduan.png') }}" alt="" width="400" style="margin-top: 5px">
 							</a><br>
 						</div>
 						<div class="col-md-4">
-							<img src="{{ url('frontend/hukum.gif') }}" alt="" class="d-none d-md-block" width="550" style="position: absolute; right: 150px; bottom: 0;">
+							<img src="{{ url('frontend/hukum.gif') }}" alt="" class="d-none d-md-block" width="500" style="position: absolute; right: 250px; bottom: 0;">
 						</div>
 					</div>
 				</div>
-				<div class="col-2" style="margin-top: 100px;">
+				<div class="col-2">
 					<div class="d-flex justify-content-end">
-						<a href="tel:+6282163480130">
-							<img src="{{ url('frontend/telepon.png') }}" alt="" width="100">
+						<a href="tel:+6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-telp.png') }}" alt="" width="120">
 						</a>
 					</div>
 					<div class="d-flex justify-content-end">
-						<a href="https://wa.me/6282163480130">
-							<img src="{{ url('frontend/wa.png') }}" alt="" width="100">
+						<a href="https://wa.me/6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-vc.png') }}" alt="" width="120">
+						</a>
+					</div>
+                    <div class="d-flex justify-content-end">
+						<a href="https://wa.me/6282163480130" target="_blank">
+							<img src="{{ url('frontend/btn-wa.png') }}" alt="" width="120">
+						</a>
+					</div>
+                    <div class="d-flex justify-content-end">
+						<a href="{{ route('layanan') }}">
+							<img src="{{ url('frontend/btn-kembali-3.png') }}" alt="" width="120">
 						</a>
 					</div>
 				</div>
 			</div>
-			<a href="{{ route('layanan') }}" style="position: absolute; bottom: 0; left: 0;">
-				<img src="{{ url('frontend/btn-kembali.png') }}" alt="">
-			</a>
 		</div>
 		<audio src="{{ url('frontend/informasi_pengaduan.wav') }}" type="audio/wav" autoplay hidden loop></audio>
 	</main>
